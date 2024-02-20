@@ -73,7 +73,7 @@ with DAG('zillow_analytics_dag',
         aws_conn_id='aws_s3_conn',
         wildcard_match=False,  # Set this to True if you want to use wildcards in the prefix
         timeout=60,  # Optional: Timeout for the sensor (in seconds)
-        poke_interval=5,  # Optional: Time interval between S3 checks (in seconds)
+        poke_interval=5, #Time interval between S3 checks (in seconds)
         )
         
 
