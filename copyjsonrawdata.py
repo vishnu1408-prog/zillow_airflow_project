@@ -14,9 +14,9 @@ def lambda_handler(event, context):
     print(target_file_name)
    
     waiter = s3_client.get_waiter('object_exists')    
-    waiter.wait(Bucket=source_bucket, Key=object_key)
+    waiter.wait(Bucket=source_bucket, Key=object_key)#getting request from S3 client to lambda .
     
-    response = s3_client.get_object(Bucket=source_bucket, Key=object_key)
+    response= s3_client.get_object(Bucket=source_bucket, Key=object_key) to
     print(response)
     data = response['Body']
     print(data)
